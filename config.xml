@@ -12,8 +12,11 @@
   <preference name="Orientation" value="default"/>
   <preference name="loglevel" value="DEBUG"/>
   <preference name="AndroidLaunchMode" value="singleTop"/>
+  <preference name="StatusBarOverlaysWebView" value="true" />
+  <preference name="StatusBarBackgroundColor" value="#33393c" />
+  <preference name="StatusBarStyle" value="lightcontent" />
   <preference name="ErrorUrl" value=""/>
-  <preference name="Fullscreen" value="false"/>
+  <preference name="Fullscreen" value="true"/>
   <preference name="KeepRunning" value="true"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="1000"/>

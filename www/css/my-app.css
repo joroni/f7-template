@@ -25,6 +25,23 @@
     src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'), url(https://fonts.gstatic.com/s/robotocondensed/v13/b9QBgL0iMZfDSpmcXcE8nBYyuMfI6pbvLqniwcbLofP2Ot9t5h1GRSTIE78Whtoh.woff2) format('woff2');
     unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
 }
+.right {
+  margin-right:10px;
+}
+
+.list-block .item-inner:after {
+  background: rgba(201,0,0,0.25) !important;
+}
+
+.navbar:after {
+  background-color: #33393c !important;
+  background: url(img/logo-bg.png)  center center;
+}
+.content-block-title {
+text-align: right;
+color:#ed1c16 !important;
+
+}
 .buttonHolder {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.2);
@@ -32,6 +49,10 @@
     width: 100%;
     left: -20px;
     position: absolute;
+}
+
+.panel.panel-left{
+  background: #33393c !important;
 }
 .moreButton {
     text-transform: uppercase;
@@ -83,7 +104,7 @@ a.floating-button.comment {
 div[class*="col-"] {
   background: #fff;
   text-align: center;
-  color: #000;
+  color: #33393c;
   border: 1px solid #ddd;
   padding: 5px;
 }
@@ -104,7 +125,7 @@ div[class*="col-"] {
 .item[class*="col-"] {
     background: #fff;
     text-align: center;
-    color: #000;
+    color: #33393c;
     border: 1px solid #ddd;
     padding: 0px;
 }
@@ -117,6 +138,12 @@ div[class*="col-"] {
 .navbar .left {
     padding: 0 5px 0 5px;
 }
+
+.navbar .center {
+    color: #fff;
+    line-height: 20px !important;
+}
+
 .row.col-50.thumbholder {
     width: 50%;
     margin-bottom: 15px;
@@ -149,8 +176,8 @@ div[class*="col-"] {
       height: auto;*/
 }
 .home {
-    background: url(img/coke-bottle.png) no-repeat top center;
-    background-size: contain !important;
+    background: url(img/coke-light.jpg) no-repeat top center;
+    background-size: cover !important;
 }
 .item,
 .thumb {
@@ -209,7 +236,7 @@ a.more {
     border: none !important;
 }
 #top_title {
-    height: 35px;
+    height: 20px;
 }
 
 .navbar a {
@@ -235,9 +262,12 @@ a.tab-link.active {
 }
 
 .navbar-inner {
-    background: #ed1c16 !important;
+  /*  background: #ed1c16 !important;*/
+      background: #33393c !important;
 }
-
+.navbar .cener {
+  line-height: 30px !important
+}
 .toolbar-inner {
     background: #fff !important;
 }
