@@ -100,6 +100,10 @@ a.floating-button.comment {
 .popup-overlay {
     background: rgba(255, 0, 0, 0) !important;
 }
+
+.panel-left .list-block li {
+  background: #33393c !important;
+}
 /*
 div[class*="col-"] {
   background: #fff;
@@ -424,6 +428,11 @@ i.status {
   background-repeat: no-repeat;
 
 }
+
+.size-14 { font-size: 14px !important; }
+.size-25 { font-size: 25px; }
+.size-29 { font-size: 29px; }
+.size-50 { font-size: 50px; }
 
 .stat-0 {
   color:rgb(230, 16, 23) !important;

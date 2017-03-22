@@ -35,7 +35,12 @@ var view3 = myApp.addView('#view-3', {
 var view3B = myApp.addView('#view-3B');
 var view4 = myApp.addView('#view-4');
 
-
+$$('.logout-button').on('click', function () {
+         myApp.confirm('Are you sure you want to log out?', alertTitle, function () {
+        // myApp.alert('You have clicked the Ok button!!!');
+        log_out();
+      });
+  });
 /**************************************************/
 //- One group, three buttons
 $$('#avatar2').on('click', function () {
@@ -74,6 +79,8 @@ function loginScreenOut() {
   $$('.login-screen').removeClass('modal-in');
   $$('.login-screen').addClass('modal-out');
 }
+
+
 
 
 

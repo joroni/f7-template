@@ -21,7 +21,7 @@
 	<script type="text/javascript" src="vendor/jquery.form.js"></script>
 	<link rel="stylesheet" href="css/framework7-icons.css">
 	<script type="text/javascript" charset="utf-8" src="components/loader.js"></script>
-	<script src="js/plugins/camera.js"></script>
+	<!--<script src="js/plugins/camera.js"></script>-->
 
 
 <body>
@@ -31,7 +31,7 @@
 	<div class="panel-overlay"></div>
 	<!-- Left panel with reveal effect-->
 	<!---********************** Left panel with reveal effect ****************************-->
-	<div class="panel panel-left panel-reveal layout-light">
+	<div class="panel panel-left panel-reveal layout-dark">
 			<!--<div class="content-block-title">Left Panel</div>-->
 			<!--<a href="#" class="close-panel">Close</a>-->
 
@@ -45,14 +45,14 @@
 					<div class="profile-id">@davegraham</div>
 					<div class="profile-desc profile-email">Freelance designer, software engineer and cyclist</div>
 					<br />
-					<a href="#index" onclick="log_out();" class="close-panel">Logout</a>
+					<a href="#" class="close-panel logout-button">Logout</a>
 			</div>
 			<div class="list-block no-margin">
 					<ul>
 							<li>
 									<a href="#welcome" id="homeButton" class="homeButtonLink item-link close-panel">
 											<div class="item-content">
-													<div class="item-media"><i class="icon icon-f7"></i></div>
+													<div class="item-media"><i class="f7-icons size-14">home_fill</i></div>
 													<div class="item-inner">
 															<div class="item-title">Home</div>
 													</div>
@@ -62,7 +62,7 @@
 							<li>
 									<a href="#view-3" class="tab-link item-link  close-panel">
 											<div class="item-content">
-													<div class="item-media"><i class="icon icon-f7"></i></div>
+													<div class="item-media"><i class="f7-icons size-14">person_fill</i></div>
 													<div class="item-inner">
 															<div class="item-title">Profile</div>
 													</div>
@@ -178,14 +178,16 @@
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="center sliding">
-						<span id='top_title'><img src="img/logo-black.png" style="width:auto !important; height: 50px;"></span>
+						<span id='top_title'><!--<img src="img/logo-black.png" style="width:auto !important; height: 50px;">-->
+ARCHIVES
+						</span>
 					</div>
 				</div>
 			</div>
 			<div class="pages navbar-through">
 				<div data-page="index-2" class="page">
 					<div class="page-content">
-						<div class="content-block-title">Archives</div>
+						<div class="content-block-title"></div>
 						<div class="list-block media-list">
 								<ul id="oldposts" class="oldposts">
 								</ul>
@@ -200,7 +202,9 @@
 			<div class="navbar">
 				<div class="navbar-inner">
 					<div class="center sliding">
-						<span id='top_title'><img src="img/logo-black.png" style="width:auto !important; height: 50px;"></span>
+						<span id='top_title'><!--<img src="img/logo-black.png" style="width:auto !important; height: 50px;">-->
+MY PROFILE
+						</span>
 					</div>
 				</div>
 			</div>
@@ -282,7 +286,8 @@
 						<div class="content-block">
 							<div class="row">
 								<div class="col-100">
-									<a href="#loginScreen" class="open-login-screen button link gray" onclick="log_out();"><i class="f7-icons">logout</i></a>
+								<!--	<a href="#loginScreen" class="open-login-screen button link gray logout-button" onclick="log_out();"><i class="f7-icons">logout</i></a>-->
+								<a href="#" class="button link gray logout-button"><i class="f7-icons">logout</i></a>
 								</div>
 							</div>
 						</div>
@@ -394,15 +399,19 @@
 						</div>
 				</div>
 					<div class="page-content">
-						<div class="">
-							<a href="#" onclick="capturePhoto();" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Capture</span></a>
-							<a href="#" onclick="capturePhotoEdit();" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Edit</span></a>
-							<a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Library</span></a>
-							<a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Album</span></a>
 
-						</div>
-						<img style="display:none;width:60px;height:60px;" id="smallImage" src="" />
-						<img style="display:none;" id="largeImage" src="" />
+
+						<form action="{{ URL::To('update/avatar') }}" method="post" enctype="multipart/form-data" class="dropzone"
+                               id="my-awesome-dropzone" >
+
+                                    <div class="fallback">
+                                      <input name="avatar" type="file" multiple />
+
+                                      <input type='submit'>
+                                    </div>
+                                  </form>
+
+
 					</div>
 				</div>
 			</div>
