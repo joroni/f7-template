@@ -258,6 +258,7 @@ a.more {
 
 .toolbar a, .tabbar-labels a.tab-link{
   color: #ed1c16 !important;
+  padding-top:10px !important;
 }
 
 a.tab-link.active {

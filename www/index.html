@@ -20,6 +20,7 @@
 	<script type="text/javascript" src="vendor/jquery.validate.js"></script>
 	<script type="text/javascript" src="vendor/jquery.form.js"></script>
 	<link rel="stylesheet" href="css/framework7-icons.css">
+	<link rel="stylesheet" href="vendor/dropzone/dropzone.css">
 	<script type="text/javascript" charset="utf-8" src="components/loader.js"></script>
 	<!--<script src="js/plugins/camera.js"></script>-->
 
@@ -223,9 +224,9 @@ MY PROFILE
 								<img style="display:none;" id="largeImage" src="" />
 
 							</div>-->
-
+							<a href="#" data-popup=".popup-takephoto" class="open-popup">
 							<img src="img/5388738458_ea9fd2a7d7_q.jpg" class="avatar profile-image">
-						<!--</a>-->
+						</a>
 
 						<input type="hidden" name="user_id_upload" id="user_iddddddd" value=""/>
 
@@ -385,31 +386,29 @@ MY PROFILE
 				<div data-page="takephoto" class="page">
 					<div class="navbar">
 						<div class="navbar-inner">
-							<div class="left"><a href="#" class="close-popup">Close</a></div>
+							<div class="left"><a href="#" class="close-popup"><i class="f7-icons">close</i></a></div>
 						<div class="center">Profile Photo</div>
+						<div class="right"><i class="f7-icons"></i></div>
 						</div>
 					</div>
 					<div class="toolbar takephoto">
 						<div class="toolbar-inner">
-							<a href="#" onclick="capturePhoto();" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Capture</span></a>
+						<!--	<a href="#" onclick="capturePhoto();" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Capture</span></a>
 							<a href="#" onclick="capturePhotoEdit();" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Edit</span></a>
 							<a href="#" onclick="getPhoto(pictureSource.PHOTOLIBRARY);" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Library</span></a>
 							<a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" class="tab-link"><i class="f7-icons">camera</i><span class="tabbar-label">Album</span></a>
-
+-->
 						</div>
 				</div>
 					<div class="page-content">
 
 
-						<form action="{{ URL::To('update/avatar') }}" method="post" enctype="multipart/form-data" class="dropzone"
-                               id="my-awesome-dropzone" >
-
-                                    <div class="fallback">
-                                      <input name="avatar" type="file" multiple />
-
-                                      <input type='submit'>
-                                    </div>
-                                  </form>
+						<form action="http://ec2-54-214-99-121.us-west-2.compute.amazonaws.com/laravel/update/avatar" method="post" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone" >
+								<div class="fallback">
+                    <input name="avatar" type="file" multiple />
+										<input type='submit'>
+                </div>
+            </form>
 
 
 					</div>
@@ -742,7 +741,7 @@ MY PROFILE
 	<script type="text/javascript" src="js/framework7/framework7.min.js"></script>
 	<!-- Path to your app js-->
 	<script type="text/javascript" src="js/my-app.js"></script>
-	<script src="vendor/dropzone.js"></script>
+	<script src="vendor/dropzone/dropzone.js"></script>
 
 </body>
 </html>
